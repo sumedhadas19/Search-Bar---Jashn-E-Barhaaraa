@@ -1,0 +1,288 @@
+:root {
+  --card-gap: 20px;
+  --card-width: 200px;
+  --card-radius: 12px;
+  --card-img-height: 140px;
+  --text-light: #fff;
+  --text-muted: #6b7280;
+}
+
+/* Typography & container */
+
+
+body {
+ 
+
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: white;
+   font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+
+
+.search-box {
+  position: relative;
+  margin-bottom: 30px;
+ 
+
+}
+
+.search-box input {
+  width: 90%;
+  margin-left:60px;
+  padding: 12px 40px 12px 40px;
+  border: none;
+  border-radius: 30px;
+  background-color: #22222258;
+  color: white;
+  font-size: 16px;
+}
+
+.search-box {
+  
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(27, 26, 26, 0.562);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: 16px auto;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: #333;
+}
+
+.search-box .search-icon {
+  font-size: 18px;
+  color: #888;
+}
+
+.search-box img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 74px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #999;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 54px;
+}
+
+.btn {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 24px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn.all {
+  background-color: #6613638a;
+}
+.btn.romance {
+  background-color: #6613638a;
+}
+.btn.sad {
+  background-color: #6613638a;
+}
+.btn.remix {
+  background-color: #6613638a;
+  color: rgb(243, 239, 239);
+}
+.btn.rock {
+  background-color: #6613638a; 
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 30px 0 16px 8px;
+  color: #111;
+}
+
+/* Card Row Grid */
+.card-row {
+  display: flex;
+  gap: var(--card-gap);
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card-row::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  min-width: var(--card-width);
+  background: #c9bdbd8c;
+
+  border-radius: var(--card-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.838);
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  width: 100%;
+  height: var(--card-img-height);
+  object-fit: cover;
+}
+
+.card-content, .card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #111827;
+}
+
+.card-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+/* Make artist images circular in card layout */
+.artist-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 10px;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card.bg-transparent {
+  background-color: transparent;
+  box-shadow: none;
+  min-width: var(--card-width);
+  flex-shrink: 0;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.card-content.text-center {
+  padding: 0;
+}
+
+/* Artists Section */
+.artists-row {
+  display: flex;
+  gap: var(--card-gap);
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.artist-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+  background-color: #ccc;
+}
+
+.artist-name {
+  font-weight: 500;
+}
+
+/* Bottom Nav */
+.nav-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #3b4759;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #3B82F6;
+}
+
+.nav-link img {
+  height: 24px;
+  width: 24px;
+  margin-bottom: 4px;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 18px;
+  }
+
+  .card {
+    min-width: 160px;
+  }
+
+  .artist-img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .artist-card {
+    width: 80px;
+  }
+
+  .container {
+    padding: 16px 8px;
+  }
+}
